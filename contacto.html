@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="contacto">
+            <h2>Datos personales</h2>
+            <from action="/enviar"method="POST"> <!--crea un formulario-->
+                <fieldset> <!--agrupa campos relacionados-->
+                    <legend>Datos personales</legend>
+                    <label for="nombre">Nombre: </label>
+                    <input type="tex" id="nombre" name="nombre" required>
+                    <br>
+                    <label for="email">Correo electronico: </label>
+                    <input type="email" id="email" name="email" placeholder="su.alexander.soto.t@upds.edu.bo" required>
+                    <br>
+                    <label for="telefono">Telefono: </label>
+                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{8}"required>
+                    <br>
+                    <label for="edad">edad: </label>
+                    <input type="number" id="edad" name="edad" min="18" max="100" required>
+                    <br>
+                    <label for="fecha">fecha de nacimiento: </label>
+                    <input type="date" id="fecha" name="fecha" required>
+                    <br>
+
+</body>
+</html>

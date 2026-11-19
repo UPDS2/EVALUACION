@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Luxury</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header id="inicio">
+        <h1>AUTO LUXURY 🚗</h1>
+        <p>Descubre tu próximo automóvil. Elegancia, potencia y comodidad.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="autos.html">Automóviles</a></li>
+            <li><a href="marcas.html">Marcas</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="intro">
+            <h2>Encuentra el auto de tus sueños</h2>
+            <p>
+                Conoce diferentes modelos de automóviles de las mejores marcas.
+                Compara sus características, descubre sus precios y elige tu favorito.
+            </p>
+        </section>
+        <section class="busqueda">
+
+            <h2>Busca tu automóvil</h2>
+
+            <input type="text" id="buscar"
+            placeholder="Escribe el nombre del automóvil">
+
+            <select id="filtro">
+                <option value="todos">Todas las marcas</option>
+                <option value="Toyota">Toyota</option>
+                <option value="BMW">BMW</option>
+                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                <option value="Honda">Honda</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="Audi">Audi</option>
+            </select>
+
+            <p id="contador">❤️ Favoritos: 0</p>
+
+        </section>
+        <section class="autos" id="autos">
+
+            <h2>Nuestros automóviles 🚘</h2>
+
+            <div class="cards">
+                <div class="card" data-marca="Toyota" data-nombre="Toyota Corolla">
+
+                    <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=500"
+                    alt="Automóvil Toyota Corolla">
+
+                    <h3>Toyota Corolla</h3>
+
+                    <p>
+                        Marca: Toyota<br>
+                        Tipo: Sedán<br>
+                        Motor: 1.8 litros
+                    </p>
+
+                    <h4>Precio: $22.000</h4>
+
+                    <button onclick="verAuto('Toyota Corolla')">
+                        Ver detalles
+                    </button>
+
+                    <button class="favorito" onclick="agregarFavorito(this)">
+                        ❤️ Favorito
+                    </button>
+
+                </div>
+                <div class="card" data-marca="BMW" data-nombre="BMW Serie 3">
+
+                    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=500"
+                    alt="Automóvil BMW Serie 3">
+
+                    <h3>BMW Serie 3</h3>
+
+                    <p>
+                        Marca: BMW<br>
+                        Tipo: Deportivo<br>
+                        Motor: 2.0 litros
+                    </p>
+
+                    <h4>Precio: $35.000</h4>
+
+                    <button onclick="verAuto('BMW Serie 3')">
+                        Ver detalles
+                    </button>
+
+                    <button class="favorito" onclick="agregarFavorito(this)">
+                        ❤️ Favorito
+                    </button>
+
+                </div>
+                <div class="card" data-marca="Mercedes-Benz" data-nombre="Mercedes-Benz">
+
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=500"
+                    alt="Automóvil Mercedes Benz">
+
+                    <h3>Mercedes-Benz</h3>
+
+                    <p>
+                        Marca: Mercedes-Benz<br>
+                        Tipo: Sedán<br>
+                        Motor: 2.0 litros
+                    </p>
+
+                    <h4>Precio: $42.000</h4>
+
+                    <button onclick="verAuto('Mercedes-Benz')">
+                        Ver detalles
+                    </button>
+
+                    <button class="favorito" onclick="agregarFavorito(this)">
+                        ❤️ Favorito
+                    </button>
+
+                </div>
+                <div class="card" data-marca="Honda" data-nombre="Honda Civic">
+
+                    <img src="https://images.unsplash.com/photo-1594070319944-7c0cbebb6f58?w=500"
+                    alt="Automóvil Honda Civic">
+
+                    <h3>Honda Civic</h3>
+
+                    <p>
+                        Marca: Honda<br>
+                        Tipo: Sedán<br>
+                        Motor: 2.0 litros
+                    </p>
+
+                    <h4>Precio: $25.000</h4>
+
+                    <button onclick="verAuto('Honda Civic')">
+                        Ver detalles
+                    </button>
+
+                    <button class="favorito" onclick="agregarFavorito(this)">
+                        ❤️ Favorito
+                    </button>
+
+                </div>
+                <div class="card" data-marca="Hyundai" data-nombre="Hyundai Tucson">
+
+                    <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=500"
+                    alt="Automóvil Hyundai Tucson">
+
+                    <h3>Hyundai Tucson</h3>
+
+                    <p>
+                        Marca: Hyundai<br>
+                        Tipo: SUV<br>
+                        Motor: 2.0 litros
+                    </p>
+
+                    <h4>Precio: $29.000</h4>
+
+                    <button onclick="verAuto('Hyundai Tucson')">
+                        Ver detalles
+                    </button>
+
+                    <button class="favorito" onclick="agregarFavorito(this)">
+                        ❤️ Favorito
+                    </button>
+
+                </div>
+                <div class="card" data-marca="Audi" data-nombre="Audi A4">
+
+                    <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=500"
+                    alt="Automóvil Audi A4">
+
+                    <h3>Audi A4</h3>
+
+                    <p>
+                        Marca: Audi<br>
+                        Tipo: Sedán<br>
+                        Motor: 2.0 litros
+                    </p>
+
+                    <h4>Precio: $38.000</h4>
+
+                    <button onclick="verAuto('Audi A4')">
+                        Ver detalles
+                    </button>
+
+                    <button class="favorito" onclick="agregarFavorito(this)">
+                        ❤️ Favorito
+                    </button>
+
+                </div>
+
+            </div>
+
+            <p id="sinResultados">No se encontraron automóviles.</p>
+
+        </section>
+        <section class="ventana" id="ventana">
+
+            <div class="contenido">
+
+                <h2>Detalles del automóvil 🚘</h2>
+
+                <p id="informacion"></p>
+
+                <button onclick="cerrarVentana()">
+                    Cerrar
+                </button>
+
+            </div>
+
+        </section>
+        <section class="marcas" id="marcas">
+
+            <h2>Marcas disponibles</h2>
+
+            <p>
+                Toyota | BMW | Mercedes-Benz |
+                Honda | Hyundai | Audi
+            </p>
+
+        </section>
+
+    </main>
+    <footer id="contacto">
+        <h3>AUTO LUXURY</h3>
+        <p>Tu próximo automóvil te espera.</p>
+        <p>2026 | Todos los derechos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

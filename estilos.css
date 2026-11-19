@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: linear-gradient(135deg, #eeeeee, #cccccc);
+    color: #333;
+    text-align: center;
+}
+header{
+    background: linear-gradient(90deg, #111111, #444444);
+    color: white;
+    padding: 60px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+header h1{
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+header p{
+    font-size: 1.2em;
+}
+nav{
+    background: #111111;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+nav li{
+    margin: 10px 20px;
+}
+nav a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+nav a:hover{
+    background: #d62828;
+    transform: scale(1.1);
+}
+.intro{
+    background: white;
+    padding: 60px 20px;
+    border-bottom: 5px solid #d62828;
+}
+
+.intro h2{
+    color: #d62828;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.intro p{
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+.busqueda{
+    background: #eeeeee;
+    padding: 35px 20px;
+}
+
+.busqueda h2{
+    color: #222222;
+    margin-bottom: 20px;
+}
+
+.busqueda input{
+    width: 300px;
+    padding: 12px;
+    border: 2px solid #cccccc;
+    border-radius: 20px;
+    margin: 10px;
+}
+.busqueda select{
+    padding: 12px;
+    border: 2px solid #cccccc;
+    border-radius: 20px;
+    margin: 10px;
+}
+.busqueda input:focus,
+.busqueda select:focus{
+    border-color: #d62828;
+    outline: none;
+}
+#contador{
+    color: #d62828;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.autos{
+    padding: 50px 20px;
+}
+.autos h2{
+    color: #222222;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+.card{
+    background: white;
+    width: 310px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: 0.3s;
+}
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.card h3{
+    color: #d62828;
+    padding: 0 15px;
+    margin: 15px 0;
+}
+.card p{
+    color: #555555;
+    padding: 0 15px;
+    margin: 10px 0 15px;
+    line-height: 1.6;
+}
+.card h4{
+    color: #222222;
+    margin: 15px;
+}
+.card button{
+    background: #d62828;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px 3px 20px;
+    transition: 0.3s;
+}
+.card button:hover{
+    background: #222222;
+    transform: scale(1.05);
+}
+.card .favorito{
+    background: #555555;
+}
+
+.card .favorito:hover{
+    background: #d62828;
+}
+.ventana{
+    display: none;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+}
+.contenido{
+    background: white;
+    width: 350px;
+    max-width: 90%;
+    padding: 30px;
+    border-radius: 15px;
+}
+.contenido h2{
+    color: #d62828;
+    margin-bottom: 20px;
+}
+.contenido p{
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.contenido button{
+    background: #d62828;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#sinResultados{
+    display: none;
+    margin-top: 25px;
+    color: #d62828;
+    font-weight: bold;
+}
+.marcas{
+    background: white;
+    padding: 40px 20px;
+    margin-top: 20px;
+}
+.marcas h2{
+    color: #d62828;
+    margin-bottom: 15px;
+}
+footer{
+    background: #111111;
+    color: white;
+    padding: 30px;
+    font-size: 0.9em;
+    margin-top: 40px;
+    line-height: 1.8;
+}
+@media (max-width: 768px){
+
+    nav ul{
+        flex-direction: column;
+    }
+    .cards{
+        flex-direction: column;
+        align-items: center;
+    }
+    header h1{
+        font-size: 2em;
+    }
+    .busqueda input{
+        width: 90%;
+    }
+    .busqueda select{
+        width: 90%;
+    }
+
+}
